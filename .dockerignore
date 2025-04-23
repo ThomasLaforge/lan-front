@@ -1,0 +1,12 @@
+node_modules
+.dockerignore
+dist
+maquette
+.husky
+.storybook
+.env.example
+.gitignore
+.nvmrc
+.prettierrc
+Dockerfile
+README.md
