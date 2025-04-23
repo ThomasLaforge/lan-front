@@ -23,3 +23,6 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/lan-front:latest
+
+      - name: Trigger Render Deploy
+        run: curl https://api.render.com/deploy/srv-d04bd0adbo4c73eenh7g?key=BHvxX-PtC5w
