@@ -7,13 +7,13 @@ import {
   useState
 } from "react";
 
+import { useNavigate } from "react-router-dom";
+import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
 import { Card } from "../../components/card/Card";
 import InfoTournament from "../../components/info-tournament/InfoTournament";
 import InputText from "../../components/inputs/InputText";
 import Navbar from "../../components/navbar/Navbar";
 import PlayerForm from "../../components/player-form/PlayerForm";
-import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
-import { useNavigate } from "react-router-dom";
 
 export interface Player {
   [key: string]: string;
@@ -57,7 +57,7 @@ function Register() {
   );
   const [levels, setLevels] = useState<string[]>([]);
   const [promos, setPromos] = useState<string[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchLevels = async () => {
@@ -257,8 +257,8 @@ function Register() {
       <h1 className="pageTitle">Inscription</h1>
       <Card>
         <div className="register-container">
-        <InfoTournament isRegistration={true} />
-      
+          <InfoTournament isRegistration={true} />
+
           <div className="register-form">
             <h2>Equipe</h2>
             <form className="player-form">
